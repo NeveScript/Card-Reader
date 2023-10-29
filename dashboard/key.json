@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "observarioviolenciamulher",
+    "private_key_id": "67e55b4d3d95672ff91f2f761928c851728c501d",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDo7jREWtJ60YS3\nNYRv+MU9FHZM0VCxkhzUBi7LuRYD4qdqx9Suq3n2MD1WC6z22IGyIDbGjS/CdQtk\noLtrLZzkq6QLG7KnXT5XTniuOH0IgSJGcDphf/uwMn/jQDDmDUR5L69rK7tjru9q\neK04n89IrK9ezJtydhwTTQdiPfmX2wCwyw4fVyR8HhaAA+mW+XbRgR0jMUpdQhJI\nLuWNHFUGe0f1kWf7YtH853DLkU9O4y8wDPAomr5aLiqVFlDMBqpkGE0Rqqtx8o5s\nx8gcj+sVydPKLQGXP9yP2bCuv1GVeS6Uj8e7cUgN270u+Oa9jjgPrpSE5EuRW/EG\nJicGTuLLAgMBAAECggEAPF+FT5REys2kewIVjhoqMU8s7HMyWZwX+cKSfX4/HQmx\nwAUEdLOAXJWbSEKldaOfViZwXB07HElPByl7+mcrq79rOO/YafXKk0GFGQ8OJVan\nJh+vmhbciwpDyIiaQ/57WXfJHVuL6eXtKykVKMCPLvSHTeh1gADp/Pyxpb6Pg1Kj\nK8foWkDXdQQT2z3scBAvq+oXIcvBsyNShRa+2TmjsgnOoablDSG32zWR+9lOJVrC\nuYA9+NCPkjYdpRE2CGSUTWJUg2eNRw3XZSNe+PqOaL/INof+6JwE3IWfCoqjhaLX\nlL3nRO7vSlCljBb4HijH6IoztcY/2tSfBsssk5SDqQKBgQD4bJeHvU/MRiL84Oyy\npzRMToGLPYGd9Lry5VRD67tbNp97D2rGbGbUEt/Av/N/cL30UZrPkPG0tDYgrvJ0\nP3c9qDjVRc1Mq+r0ULpXqjXOADZbanLTIOg1a+GcD7D4TYnyHwwXrSrEKwyUHDi7\nLdlEIaFlVzhygFTAhAxJxV6QcwKBgQDwCKfHbRCrk7xY5C+gZvaUY9m/wmRhPow8\nnBivsR7U0WktStxvPJxiB9GM7JLkrZil/ua5EBFhzQHIuulkk5LyyBX3KeIETU+U\nsxC7BOwsgx1/ItDGBSWStiA4fMJ/GsMJrT8V1ryL1u8z+TC7FBzhSFD76G3cHA9t\nhgn9OPcGSQKBgGTWX2O/2mZGiekvu6SA7l+S9k54tuZQ8pmpsNypETHjKDUheuv0\nEIFA8AYjZEl0kAZeIYLjiNka1WXK3auGH3atk/QuEzluBz8IjbsL4i8uMuJEgTtl\n/hvBIKDiValUgAwBwjzSE6vw9XghRH3mDGz1YbfrAYSoxr4mW36OWOY1AoGAGDPH\nNwR4OdSbmRro8nNvSWcH/Z3MIUH9Qd87Xfut8CdtQ3PY5h5mZjwDlQIFjakzSwl4\nmhBUsFfLZkHyZoG6v2ANVu6SK3zgGU400aadaZ+OydLo2g6Ky1Axz4BE3CwGnmMp\niTotqKvzUno9v583ij+QatX0vczWgWSSfUXRIoECgYEA0UsV2oPb7ACepTWee2UN\nE4eVzKiYvGAHstIz7nZuB+7khMif5ZRuYj0sjoUQkNy9up8nPIpfaiJ2LdW3ze96\ng7rYfzmnNI/vFAlWH6zUkwrsWpfzx3s7LLpiPJLgFciUd74O9mCc4dQ99MKoLlTh\nDv6tWsHCr0HHuw1//lbTUn8=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-5g35b@observarioviolenciamulher.iam.gserviceaccount.com",
+    "client_id": "104502962813172952077",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-5g35b%40observarioviolenciamulher.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
