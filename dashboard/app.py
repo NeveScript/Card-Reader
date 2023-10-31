@@ -29,7 +29,7 @@ markers = []
 
 # Função para obter o endereço com base nas coordenadas
 def get_location(x, y):
-    api_key = "API_KEY"  
+    api_key = "58bf9451648c478fbbc60a2f9d7c3f21"  
     url = f"https://api.opencagedata.com/geocode/v1/json?q={x}+{y}&key={api_key}"
     response = requests.get(url)
     data = response.json()
