@@ -52,7 +52,12 @@ def count_cases_by_location(data):
             y = value["location"][1]
             location = get_location(x, y)
             #print("Edereço: " + location)
-            marker = Marker(position=(x, y), children=location)
+            #marker = Marker(position=(x, y), children=location)
+            popup_text = f"Endereço: {location} | Data: {value['timestamp']} | Situação: {value['situacao']}"
+            marker = Marker(position=(x, y), children=[
+                location,  
+                dl.Popup(children=popup_text)  
+            ])
             markers.append(marker)
             location_counts[location] += 1
 
@@ -83,7 +88,7 @@ map = dl.Map(
     ] + markers,  
     center=[56, 10],
     zoom=6,
-    style={'height': '50vh'}
+    style={'height': '75vh'}
 )
 # ============================================================== #
 # ===================== [ LAYOUT ]============================== #
@@ -139,6 +144,13 @@ app.layout = dbc.Container([
     ]),
     html.Div([
         map
+    ]),
+    html.Div([
+        dcc.Graph(
+            figure=fig,  
+            style={'height': '50vh'}  
+        )
+
     ]),
 ], fluid=True, className="m-3")
 
