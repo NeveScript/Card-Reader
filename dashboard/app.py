@@ -9,12 +9,13 @@ from collections import defaultdict
 import plotly.express as px
 import dash_leaflet as dl
 from dash_leaflet import Marker
+import time
 
 print("Booting...")
 # Inicializando o aplicativo Dash
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-# Carregando os dados da Firebase
+# Carregando os dados da Firebasegit
 cred = credentials.Certificate("./dashboard/key.json")
 firebase_admin.initialize_app(cred, {'databaseURL': 'https://observarioviolenciamulher-default-rtdb.firebaseio.com'})
 ref = db.reference('dados')
@@ -80,6 +81,21 @@ location_counts = count_cases_by_location(data)
 locations = list(location_counts.keys())
 case_counts = list(location_counts.values())
 cases_em_aberto_counts = count_cases_em_aberto(data)
+
+
+@app.callback(Output('map', 'children'), Input('interval-component', 'n_intervals'))
+def update_map_markers(n_intervals):
+    
+    global markers
+    markers = []
+    new_data = ref.get()
+    location_counts = count_cases_by_location(new_data)
+    locations = list(location_counts.keys())
+    case_counts = list(location_counts.values())
+    cases_em_aberto_counts = count_cases_em_aberto(new_data)
+    
+    return markers
+
 
 fig = px.pie(names=locations, values=case_counts, title='Total de Casos por Endereço')
 map = dl.Map(
