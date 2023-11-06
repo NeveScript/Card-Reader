@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio de Lanches</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Cardápio de Lanches</h1>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Hamburguer</h5>
+            <img src="https://img.freepik.com/fotos-gratis/hamburguer-isolado-no-fundo-branco-fastfood-de-hamburguer-fresco-com-carne-e-queijo_90220-1329.jpg?w=740&t=st=1699304445~exp=1699305045~hmac=c8eca2e24a91ec5fc03b9635f8ab92601c3859a173517f25c82758c4a61fc15c" width="100" height="100" alt="">
+            <p class="card-text">Preço: R$ 10.00</p>
+            <button class="btn btn-primary add-button" data-price="10.00">Adicionar</button>
+            <button class="btn btn-danger remove-button" data-price="10.00">Remover</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Batata Frita</h5>
+            <img src="https://img.freepik.com/fotos-gratis/vista-superior-deliciosas-batatas-fritas-e-molho_23-2149235944.jpg?w=740&t=st=1699304492~exp=1699305092~hmac=c616aab17422331ce49442438686455782e80bc647a7775faf7e4282ee321308" height="100" width="100" alt="">
+            <p class="card-text">Preço: R$ 5.00</p>
+            <button class="btn btn-primary add-button" data-price="5.00">Adicionar</button>
+            <button class="btn btn-danger remove-button" data-price="5.00">Remover</button>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Cachorro Quente</h5>
+            <img src="https://img.freepik.com/fotos-gratis/deliciosos-cachorros-quentes-com-mostarda-e-cebola_23-2148768194.jpg?w=740&t=st=1699304737~exp=1699305337~hmac=02cb3827f7ed216e453c92e48ca71be219686f662a2361eec4d3e60ee0edff73" height="100" width="100" alt="">
+            <p class="card-text">Preço: R$ 8.00</p>
+            <button class="btn btn-primary add-button" data-price="8.00">Adicionar</button>
+            <button class="btn btn-danger remove-button" data-price="8.00">Remover</button>
+        </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bolo</h5>
+            <img src="https://img.freepik.com/fotos-gratis/variedade-de-pedacos-de-bolo_114579-28271.jpg?w=740&t=st=1699304817~exp=1699305417~hmac=3d8d3f2b4c7a3c3557717d37748da30c837247609a1336900c412c298fab8d47" height="100" width="100" alt="">
+            <p class="card-text">Preço: R$ 7.00</p>
+            <button class="btn btn-primary add-button" data-price="7.00">Adicionar</button>
+            <button class="btn btn-danger remove-button" data-price="7.00">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <h3>Compra Total: <span id="total">R$ 0.00</span></h3>
+        <hr>
+        <button class="btn btn-success" id="finalizar">Finalizar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const addButtons = document.querySelectorAll('.add-button');
+    const removeButtons = document.querySelectorAll('.remove-button');
+    const totalElement = document.getElementById('total');
+    let totalCompra = 0;
+
+    addButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const price = parseFloat(button.getAttribute('data-price'));
+        totalCompra += price;
+        totalElement.textContent = `R$ ${totalCompra.toFixed(2)}`;
+      });
+    });
+
+    removeButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const price = parseFloat(button.getAttribute('data-price'));
+        totalCompra -= price;
+        totalElement.textContent = `R$ ${totalCompra.toFixed(2)}`;
+      });
+    });
+
+    const finalizarButton = document.getElementById('finalizar');
+    finalizarButton.addEventListener('click', () => {
+      alert(`Compra finalizada! Total: R$ ${totalCompra.toFixed(2)}`);
+    });
+  </script>
+
+  <!-- Incluindo o Bootstrap JavaScript via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
